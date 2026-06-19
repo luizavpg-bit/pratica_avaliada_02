@@ -1,0 +1,43 @@
+package exercicio_02;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class cadastros_alunos {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] nome = new String[3];
+        int[] idade = new int[3];
+        float[] nota = new float[3];
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Digite o nome do aluno:");
+            nome[i] = scanner.nextLine();
+
+            System.out.println("Digite a idade do aluno:");
+            idade[i] = scanner.nextInt();
+
+            System.out.println("Digite a nota final do aluno:");
+            nota[i] = scanner.nextFloat();
+            scanner.nextLine(); 
+            
+            System.out.println(); 
+        }
+
+        System.out.println("Informação geral do cadastro dos alunos");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Nome: " + nome[i] + " - Idade: " + idade[i] + " - Nota: " + nota[i]);
+        }
+
+        float soma = 0;
+        for (int i = 0; i < 3; i++) {
+            soma += nota[i];
+        }
+        float media = soma / 3;
+
+        System.out.println("Média geral das notas: " + media);
+
+        scanner.close();
+    }
+}
