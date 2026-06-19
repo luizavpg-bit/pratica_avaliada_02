@@ -1,0 +1,31 @@
+package exercicio_01;
+
+import java.util.Arrays;
+public class colecao_numero_analise {
+	public static void main(String[] args) {
+        int[] numeros = {2, 5, 8, 3, 10};
+
+        System.out.println("Coleção de 5 números inteiros: " + Arrays.toString(numeros));
+
+        Colecao(numeros);
+    }
+
+    public static void Colecao(int[] vetor) {
+        int soma = 0;
+        int maior = vetor[0];
+
+        for (int i = 0; i < vetor.length; i++) {
+            soma += vetor[i];
+
+            if (vetor[i] > maior) {
+                maior = vetor[i];
+            }
+        }
+
+        double media = (double) soma / vetor.length;
+
+        System.out.println("A soma é: " + soma);
+        System.out.println("A média é: " + media);
+        System.out.println("O maior valor é: " + maior);
+    }
+}
